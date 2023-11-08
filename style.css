@@ -1,0 +1,135 @@
+/*
+Theme Name: betoba
+Theme URI: http://betoba
+Author: ATV
+Author URI: https://atvcongo.org
+Description: Mon premier thème !
+Version: 1.0
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: Verdana, arial, helvetica, Lucida, sans-serif;
+  font-size: .88em;
+  color: #545454;
+  line-height: 1.43em;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #4285f4;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+div.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+article.post {
+  border-bottom: 4px dashed #ecf0f1;
+}
+
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+.site-header {
+  border-bottom: 3px solid #ecf0f1;
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 3px solid #ecf0f1;
+}
+
+#loop article {
+  margin: 0 0 50px 0;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.endnew {
+  font-size: 1.03em;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+#pagination {
+  text-align: center;
+  letter-spacing: 5px;
+  margin: 0 0 100px 0;
+}
+
+.small-thumbnail {
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+
+#searchsubmit {
+  background-color: #00a0d2;
+  color: white;
+  padding: 5px 8px;
+  font-size: 15px;
+  line-height: 1.3;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#s {
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 15px;
+  line-height: 1.1;
+  border-radius: 6px;
+}
+
+.home-columns {
+  overflow: auto;
+}
+
+.home-columns h2, h3 {
+  text-align: center;
+}
+
+.home-left {
+  width: 45%;
+  float: left;
+}
+
+.home-right {
+  width: 45%;
+  float: right;
+}
+
+.post-meta {
+  font-size: 90%;
+  font-style: italic;
+  color: #888;
+}
+
+.post__link {
+  font-style: normal;
+}
