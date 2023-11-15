@@ -1,5 +1,15 @@
-<footer class="site-footer hg_footer">
-    <p><?php bloginfo( 'name' ) ?></p>
+<footer class="hg_footer">
+
+    <vision class="hg_vision">
+        <article class="box">
+        Article 1
+        </article>
+        <article class="box">
+        Article 2
+        </article>
+    </vision>
+
+    <p class="kepi"><?php bloginfo( 'name' ) ?></p>
 </footer>
 </div> <!-- closes <div class=hg"> -->
 

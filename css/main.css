@@ -47,9 +47,11 @@
 .hg_vision {
 	grid-area: vision;
 	display: grid;
-	  grid-template-columns: 1fr 1fr 1fr;
+	  grid-template-columns: 30% 30%;
 	  grid-template-rows: auto;
-	  grid-gap: 6px;
+	  grid-gap: 8px;
+	  align-items: center;
+	  justify-content: center;
 }
 
 .hg_left {
