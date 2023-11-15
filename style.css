@@ -59,8 +59,16 @@ article.post:last-of-type {
   text-align: center;
 }
 
-.site-footer {
-  border-top: 3px solid #ecf0f1;
+.site-footer ul {
+  list-style: none;
+}
+.site-footer ul li {
+  line-height: 1.8em;
+  text-align: center;
+}
+.site-footer ul li a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #loop article {

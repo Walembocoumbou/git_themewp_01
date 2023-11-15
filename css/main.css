@@ -320,3 +320,10 @@ h6,
 		 line-height:1.2em;
  }
 
+.enligne {
+  padding: 0.5em;
+  background-color: #ffecce;
+  border: 2px solid #666666;
+  margin: 1em;
+  font-weight:bold;
+}
