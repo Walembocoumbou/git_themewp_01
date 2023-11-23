@@ -92,6 +92,17 @@
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.hg_extrait {
+		  grid-template-rows: 1fr;  
+		  grid-template-columns: 1fr;
+	  }
+		  .hg_vision {
+		  grid-template-rows: 1fr;  
+		  grid-template-columns: 40%;
+	  }
+  }
+
 /* ************************************** */
 /* menu déroulant */
 .menulist {
