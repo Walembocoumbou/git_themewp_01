@@ -1,12 +1,19 @@
 <?php get_header(); ?>
-<phots class="hg_phots">
+<phots class="phots">
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
     <?php endwhile; endif; ?>
 </phots>
 
-<main class="hg_main">
+<aside class="panel.left">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+    <br />&nbsp;
+    <?php get_template_part( 'sidebar-left' ); ?>
+    <br />&nbsp;
+</aside>
+
+<main class="mainbody">
 
     <!-- home-columns -->
     <extrait class="hg_extrait">
@@ -117,21 +124,13 @@
 
 </main>
 
-<aside class="hg_left">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-    <br />&nbsp;
-    <?php get_template_part( 'sidebar-left' ); ?>
-    <br />&nbsp;
-</aside>
-
-<aside class="hg_right">
+<aside class="panel.right">
 <br />&nbsp;<br />&nbsp;
 <br />&nbsp;<br />&nbsp;
 <div class="kepi">
     <?php get_search_form(); ?>
 </div>
 <br />&nbsp;<br />&nbsp;
-
 
 <!-- Derniers articles -->
 <p class="endnew">Derniers articles</p>

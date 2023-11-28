@@ -1,107 +1,107 @@
-.hg {
+html {
+	width: 100%;                    /* 100% width of parent (root) element */
+	height: 100vh;                  /* 100% height of viewport */
+	background: rgb(0, 0, 0, 0.1);  /* 10% opacity black (very light gray) */
+  }
+  body {
+	margin: 0;                      /* content goes to edge of viewport */
+	height: 100vh;                  /* and spans height of viewport */
+  }
+  .container {
+	min-height: 25rem;            /* mainbody height never squishes < 25rem */
 	display: grid;
-	grid-template-rows: repeat(7, auto);
-	grid-template-areas: "header"
-						"sidebar"
-						"phots"
-                        "gauche"
-						"main"
-						"ads"
-                        "footer";
-}
-
-.hg_header {
-	grid-area: header;
-	text-align: center;
-}
-
-.hg_sidebar {
-	grid-area: sidebar;
-}
-
-
-.hg_phots {
-	grid-area: phots;
-	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto;
-}
-
-.hg_footer {
-	grid-area: footer;
-}
-
-.hg_main {
-	grid-area: main;
-}
-
-.hg_extrait {
-	grid-area: extrait;
-	display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: auto;
-	  grid-gap: 8px;
-}
-
-.hg_vision {
-	grid-area: vision;
-	display: grid;
-	  grid-template-columns: 30% 30%;
-	  grid-template-rows: auto;
-	  grid-gap: 8px;
-	  align-items: center;
-	  justify-content: center;
-}
-
-.hg_left {
-	grid-area: gauche;
-}
-
-.hg_right {
-	grid-area: ads;
-}
-
-.ste-entete {
-	grid-area: entete;
-	display: grid;
-	  grid-template-columns:1f;
-	  grid-template-rows: 1fr 1fr;
-	  grid-gap: 2px;
-	align-items: center;
-	justify-items: center;
-}
-
-.box
-{
-  background: #3333FF;
-  color: #fff;
-  padding: 5px;
-}
-
-@media screen and (min-width: 600px){
-	.hg {
-		grid-template-columns:  repeat(6, 1fr);
-		grid-template-rows: repeat(5, auto);
-		grid-gap: 5px;
-		grid-template-areas: "header header header header header header"
-							"sidebar sidebar sidebar sidebar sidebar sidebar"
-							"phots phots phots phots phots phots"
-							"gauche main main main main ads"
-							"footer footer footer footer footer footer";
-	}
-}
-
-@media screen and (max-width: 900px) {
-	.hg_extrait {
+	width: 100%;
+	height: 100%;
+	grid-template-columns:
+	  [left] 13rem 1fr 13rem [right];
+	grid-template-rows:
+	  [top] min-content min-content auto min-content [bottom];
+	grid-template-areas:
+	  "head head head"
+	  "phots phots phots"
+	  "panleft mainbody panright"
+	  "foot foot foot";
+  }
+  .header {
+	background: rgb(0, 0, 0, 0.2);                             /* 20% black */
+	grid-area: head;	              /* head corresponds to name in template */
+	text-align: center;           /* and always centered texte */
+	padding: 15px;
+  }
+  .footer {
+	background: rgb(0, 0, 0, 0.2);
+	grid-area: foot;
+  }
+  .phots {
+	  background: green;
+	  grid-area: phots;
+  }
+  .panel {                            /* div elements with "panel" class */
+	background: rgb(0, 0, 0, 0.1);                             /* 10% black */
+	padding: 10px;
+  }
+  .panel.left {                    /* with both "panel" and "left" class */
+	grid-area: panleft;
+  }
+  .panel.right {
+	grid-area: panright;
+  }
+  .mainbody {
+	grid-area: mainbody;
+	text-align: justify;
+	padding: 15px;
+  }
+  
+  .hg_extrait {
+	  grid-area: extrait;
+	  display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 8px;
+		margin-bottom: 10px;
+  }
+  .hg_vision {
+	  grid-area: vision;
+	  display: grid;
+		grid-template-columns: 30% 30%;
+		grid-template-rows: auto;
+		grid-gap: 8px;
+		align-items: center;
+		justify-content: center;
+		margin-top: 15px;
+		margin-bottom: 10px;
+  }
+  .box {
+	  background: #3333FF;
+	  color: #fff;
+	  text-align: center;
+	  padding: 10px;
+  }
+  
+  @media screen and (max-width: 50rem) {     /* if viewport width < 50rem */
+	.panel.left {
+		grid-column-end: left;            /* left panel stops at left edge */
+	  }
+	  .panel.right {
+		grid-column-start: right;         /* right panel starts at right edge */
+	  }
+	  .panel {
+		display: none;                    /* neither panel is displayed */
+	  }
+	  .mainbody {
+		grid-column-start: left;          /* mainbody starts at left edge */
+		grid-column-end: right;           /* mainbody ends at right edge */
+	  }
+		.hg_extrait {
 		  grid-template-rows: 1fr;  
 		  grid-template-columns: 1fr;
 	  }
-		  .hg_vision {
+	  .hg_vision {
 		  grid-template-rows: 1fr;  
 		  grid-template-columns: 40%;
 	  }
-  }
+	}
+  
 
 /* ************************************** */
 /* menu déroulant */

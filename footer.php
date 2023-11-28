@@ -1,4 +1,4 @@
-<footer class="hg_footer">
+<footer class="footer">
 
     <vision class="hg_vision">
         <article class="site-footer">
@@ -27,7 +27,7 @@
 
     <p class="kepi"><?php bloginfo( 'name' ) ?></p>
 </footer>
-</div> <!-- closes <div class=hg"> -->
+</div> <!-- closes <div class="container"> -->
 
 <?php wp_footer() ?>
 </body>
