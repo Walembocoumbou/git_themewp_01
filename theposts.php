@@ -9,5 +9,6 @@
 <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 <p class="post-meta">Publié le <?php the_time('d/m/Y'); ?></p>
 <?php the_excerpt() ?>
-<a href="<?php the_permalink() ?>" " class="post__link">Poursuivre la lecture &raquo</a>
+<br />
+<a href="<?php the_permalink() ?>" " class="button_2">Poursuivre la lecture &raquo</a>
 </article>
