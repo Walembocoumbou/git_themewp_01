@@ -1,15 +1,8 @@
 <?php get_header(); ?>
-<phots class="phots">
-
+<phots class="hg_phots">
 </phots>
-<aside class="panel.left">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-    <br />&nbsp;
-    <?php get_template_part( 'sidebar-left' ); ?>
-    <br />&nbsp;
-</aside>
 
-<main class="mainbody">
+<main class="hg_main">
   <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
   
     <article class="post art_fond">
@@ -31,7 +24,14 @@
   <?php endwhile; endif; ?>
 </main>
 
-<aside class="panel.right">
+<aside class="hg_left">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+    <br />&nbsp;
+    <?php get_template_part( 'sidebar-left' ); ?>
+    <br />&nbsp;
+</aside>
+
+<aside class="hg_right">
   <br />&nbsp;<br />&nbsp;
   <div class="kepi">
       <?php get_search_form(); ?>

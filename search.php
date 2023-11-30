@@ -15,7 +15,7 @@
 </main>
 
 <aside class="hg_left">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
     <br />&nbsp;
     <?php get_template_part( 'sidebar-left' ); ?>
     <br />&nbsp;

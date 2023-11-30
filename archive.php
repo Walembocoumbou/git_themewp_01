@@ -1,17 +1,10 @@
 <?php get_header(); ?>
 
-<phots class="phots">
+<phots class="hg_phots">
 
 </phots>
 
-<aside class="panel.left">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-    <br />&nbsp;
-    <?php get_template_part( 'sidebar-left' ); ?>
-    <br />&nbsp;
-</aside>
-
-<main class="mainbody site__blog">
+<main class="hg_main site__blog">
         <main class="site__content">
             <?php if( have_posts() ) :
             while ( have_posts() ) {
@@ -27,7 +20,14 @@
         </div>
 </main>
 
-<aside class="panel.right">
+<aside class="hg_left">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+    <br />&nbsp;
+    <?php get_template_part( 'sidebar-left' ); ?>
+    <br />&nbsp;
+</aside>
+
+<aside class="hg_right">
     <ul>
         <?php dynamic_sidebar( 'main-sidebar' ); ?>
     </ul>
