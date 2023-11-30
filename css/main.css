@@ -7,100 +7,100 @@ html {
 	margin: 0;                      /* content goes to edge of viewport */
 	height: 100vh;                  /* and spans height of viewport */
   }
-  .container {
-	min-height: 25rem;            /* mainbody height never squishes < 25rem */
-	display: grid;
-	width: 100%;
-	height: 100%;
-	grid-template-columns:
-	  [left] 13rem 1fr 13rem [right];
-	grid-template-rows:
-	  [top] min-content min-content auto min-content [bottom];
-	grid-template-areas:
-	  "head head head"
-	  "phots phots phots"
-	  "panleft mainbody panright"
-	  "foot foot foot";
-  }
-  .header {
-	background: rgb(0, 0, 0, 0.2);                             /* 20% black */
-	grid-area: head;	              /* head corresponds to name in template */
-	text-align: center;           /* and always centered texte */
-	padding: 15px;
-  }
-  .footer {
-	background: rgb(0, 0, 0, 0.2);
-	grid-area: foot;
-  }
-  .phots {
-	  background: green;
-	  grid-area: phots;
-  }
-  .panel {                            /* div elements with "panel" class */
-	background: rgb(0, 0, 0, 0.1);                             /* 10% black */
+ 
+  /**********************/
+
+.hg_header {
+	grid-area: header;
+	text-align: center;
 	padding: 10px;
-  }
-  .panel.left {                    /* with both "panel" and "left" class */
-	grid-area: panleft;
-  }
-  .panel.right {
-	grid-area: panright;
-  }
-  .mainbody {
-	grid-area: mainbody;
-	text-align: justify;
+}
+.hg_phots {
+	grid-area: phots;
+}
+.hg_main {
+	grid-area: main;
 	padding: 15px;
-  }
-  
-  .hg_extrait {
-	  grid-area: extrait;
-	  display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 8px;
-		margin-bottom: 10px;
-  }
-  .hg_vision {
-	  grid-area: vision;
-	  display: grid;
-		grid-template-columns: 30% 30%;
-		grid-template-rows: auto;
-		grid-gap: 8px;
-		align-items: center;
-		justify-content: center;
-		margin-top: 15px;
-		margin-bottom: 10px;
-  }
-  .box {
-	  background: #3333FF;
-	  color: #fff;
-	  text-align: center;
-	  padding: 10px;
-  }
-  
-  @media screen and (max-width: 50rem) {     /* if viewport width < 50rem */
-	.panel.left {
-		grid-column-end: left;            /* left panel stops at left edge */
-	  }
-	  .panel.right {
-		grid-column-start: right;         /* right panel starts at right edge */
-	  }
-	  .panel {
-		display: none;                    /* neither panel is displayed */
-	  }
-	  .mainbody {
-		grid-column-start: left;          /* mainbody starts at left edge */
-		grid-column-end: right;           /* mainbody ends at right edge */
-	  }
-		.hg_extrait {
-		  grid-template-rows: 1fr;  
-		  grid-template-columns: 1fr;
-	  }
-	  .hg_vision {
-		  grid-template-rows: 1fr;  
-		  grid-template-columns: 40%;
-	  }
+}
+.hg_left {
+	grid-area: navigation;
+	padding: 10px;
+}
+.hg_right {
+	grid-area: ads;
+	padding: 10px;
+}
+.hg_footer {
+	grid-area: footer;
+	text-align: center;
+	padding: 10px;
+}
+
+.hg {
+	display: grid;
+	grid-template-areas: "header header header"
+						"phots phots phots"
+						"navigation main ads"
+						"footer footer footer";
+	grid-template-columns: 12rem 1fr 12rem;
+	grid-template-rows: min-content
+						min-content
+						1fr
+						min-content;
+	min-heigth: 100vh;
+ }
+ 
+ .hg_extrait {
+	grid-area: extrait;
+	display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 1fr;
+	  grid-gap: 8px;
+	  margin-bottom: 10px;
+}
+.hg_vision {
+	grid-area: vision;
+	display: grid;
+	  grid-template-columns: 30% 30%;
+	  grid-template-rows: auto;
+	  grid-gap: 8px;
+	  align-items: center;
+	  justify-content: center;
+	  margin-top: 15px;
+	  margin-bottom: 10px;
+}
+.box {
+	background: #3333FF;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+ 
+ @media screen and (max-width: 600px) {
+	 .hg {
+		 grid-template-areas: "header"
+								"phots"
+								"navigation"
+								"main"
+								"ads"
+								"footer";
+		grid-template-columns: 100%;
+		grid-template-rows: min-content
+							min-content
+							min-content
+							1fr
+							min-content
+							min-content;
+	 }
+	   	.hg_extrait {
+		grid-template-rows: 1fr;  
+		grid-template-columns: 1fr;
 	}
+	.hg_vision {
+		grid-template-rows: 1fr;  
+		grid-template-columns: 40%;
+	}
+ }
   
 
 /* ************************************** */

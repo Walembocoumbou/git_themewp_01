@@ -9,8 +9,8 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div class="container">
-	<header class="header site-header">
+<div class="hg">
+	<header class="hg_header site-header">
 
 
 				<a href="<?php echo home_url( '/' ); ?>">
