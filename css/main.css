@@ -76,7 +76,31 @@ html {
 	padding: 10px;
 }
  
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+	.hg {
+		display: grid;
+		grid-template-areas: "header header header"
+							"phots phots phots"
+							"navigation main ads"
+							"footer footer footer";
+		grid-template-columns: 12rem 1fr 12rem;
+		grid-template-rows: min-content
+							min-content
+							1fr
+							min-content;
+		min-height: 100vh;
+	 }
+	.hg_extrait {
+		  grid-template-rows: 1fr;  
+		  grid-template-columns: 1fr;
+	  }
+		  .hg_vision {
+		  grid-template-rows: 1fr;  
+		  grid-template-columns: 40%;
+	  }
+  }
+
+ @media screen and (max-width: 750px) {
 	 .hg {
 		 grid-template-areas: "header"
 								"phots"
