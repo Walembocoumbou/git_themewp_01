@@ -125,6 +125,13 @@ article.post:last-of-type {
   font-style: normal;
 }
 
+.pagination {
+  text-align: center;
+  word-spacing: 15px;
+  font-weight: 700;
+	background-color:#dee3ba;
+}
+
 .button {
   background-color: #FF9900;
   border: none;
