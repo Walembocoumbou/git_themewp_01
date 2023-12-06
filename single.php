@@ -32,6 +32,7 @@
 </aside>
 
 <aside class="hg_right">
+
   <br />&nbsp;<br />&nbsp;
   <div class="kepi">
       <?php get_search_form(); ?>

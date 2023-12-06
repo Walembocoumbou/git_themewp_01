@@ -28,9 +28,14 @@
 </aside>
 
 <aside class="hg_right">
-    <ul>
-        <?php dynamic_sidebar( 'main-sidebar' ); ?>
-    </ul>
+
+    <br />&nbsp;<br />&nbsp;
+    <br />&nbsp;<br />&nbsp;
+    <div class="kepi">
+        <?php get_search_form(); ?>
+    </div>
+    <br />&nbsp;<br />&nbsp;
+
 </aside>
 
 <?php get_footer(); ?>
