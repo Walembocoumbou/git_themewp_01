@@ -9,12 +9,12 @@
         $taxonomy_name = 'category';
         $term_children = get_term_children($term_id, $taxonomy_name);
 
-        echo '<ul class="menugauche">';
+        echo '<ul class="aguauche">';
             foreach ($term_children as $child) {
                 $term = get_term_by('id', $child, $taxonomy_name);
-                echo '<li><a class="btn btn-default" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
+                echo '<li><a class="enligne" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
             }
-        echo '</ul>';
+        echo '</ul>&nbsp;';
     ?>
 
 </main>

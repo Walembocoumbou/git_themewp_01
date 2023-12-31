@@ -355,8 +355,13 @@ h6,
 		 line-height:1.2em;
  }
 
+.aguauche {
+	list-style-type: none;
+}
+
 .enligne {
   padding: 0.5em;
+  margin-bottom: 10px;
   background-color: #ffecce;
   border: 2px solid #666666;
   margin: 1em;
