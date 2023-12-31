@@ -357,6 +357,9 @@ h6,
 
 .aguauche {
 	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .enligne {
@@ -367,3 +370,4 @@ h6,
   margin: 1em;
   font-weight:bold;
 }
+

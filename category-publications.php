@@ -12,7 +12,7 @@
         echo '<ul class="aguauche">';
             foreach ($term_children as $child) {
                 $term = get_term_by('id', $child, $taxonomy_name);
-                echo '<li><a class="enligne" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
+                echo '<li><a class="enle" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
             }
         echo '</ul>&nbsp;';
     ?>
