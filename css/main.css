@@ -357,15 +357,13 @@ h6,
 
 .aguauche {
 	list-style-type: none;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+ 	display: flex;
+	flex-flow: row wrap;
+	gap: 6px;
 }
 
 .enligne {
-  padding: 0.5em;
-  margin-bottom: 10px;
-  background-color: #ffecce;
+  color: #ffecce;
   border: 2px solid #666666;
   margin: 1em;
   font-weight:bold;
