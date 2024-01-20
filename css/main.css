@@ -359,12 +359,14 @@ h6,
 	list-style-type: none;
  	display: flex;
 	flex-flow: row wrap;
-	gap: 6px;
+	row-gap: 18px;
+	column-gap: 4px;
 }
 
 .enligne {
   color: #ffecce;
   border: 2px solid #666666;
+  padding: 0 4px 0 4px;
   margin: 1em;
   font-weight:bold;
 }
