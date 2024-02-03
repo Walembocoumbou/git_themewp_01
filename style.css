@@ -99,7 +99,8 @@ article.post:last-of-type {
 }
 
 #s {
-  height: 20px;
+  height: 25px;
+  width: 100%;
   padding: 5px 8px;
   font-size: 15px;
   line-height: 1.1;
