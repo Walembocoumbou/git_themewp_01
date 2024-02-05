@@ -46,7 +46,7 @@
         <?php
         // Custom Loop using WP_Query to fetch ACTES DE LA CONFÉRENCE ÉPISCOPALE DU CONGO (CEC) Posts
         $args = array(
-            'category_name' => 'actes-de-la-conference-episcopale-du-congo-cec',
+            'category_name' => 'actes-episcopale-de-la-cec',
             'posts_per_page' => '1',
         );
         // Custom query.
