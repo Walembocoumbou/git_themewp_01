@@ -18,7 +18,7 @@
 					/images/logocec.png" ALT="CONFÉRENCE ÉPISCOPALE DU CONGO"  height=100 width=800></a>
 
 			<section>
-				<nav class="menulist">
+				<nav id="nav">
 					<?php $args = [ 'theme_location' => 'primary' ]; ?>
 					<?php wp_nav_menu( $args ) ?>
 				</nav>
