@@ -7,15 +7,21 @@
         $taxonomy = $queried_object->taxonomy;
         $term_id = $queried_object->term_id;
         $taxonomy_name = 'category';
+        $term_children = get_term_children($term_id, $taxonomy_name); ?>
         $term_children = get_term_children($term_id, $taxonomy_name);
 
-        echo '<ul class="menugauche">';
+        <div class="hg_rubrique">
+        <?php
+            echo '<ul class="mdiocese">';
+    
             foreach ($term_children as $child) {
                 $term = get_term_by('id', $child, $taxonomy_name);
                 echo '<li><a class="btn btn-default" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
             }
-        echo '</ul>';
+            echo '</ul><br />';
+
     ?>
+    </div>
 
 </main>
 <aside class="hg_left">
