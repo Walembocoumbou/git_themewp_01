@@ -136,7 +136,7 @@ article.post:last-of-type {
   background-color: #FF9900;
   border: none;
   color: #fff;
-  padding: 15px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -148,5 +148,3 @@ article.post:last-of-type {
 .button :hover {
   background-color: #955c;
 }
-
-  

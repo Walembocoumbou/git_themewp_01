@@ -8,7 +8,6 @@
         $term_id = $queried_object->term_id;
         $taxonomy_name = 'category';
         $term_children = get_term_children($term_id, $taxonomy_name); ?>
-        $term_children = get_term_children($term_id, $taxonomy_name);
 
         <div class="hg_rubrique">
         <?php
@@ -16,7 +15,7 @@
     
             foreach ($term_children as $child) {
                 $term = get_term_by('id', $child, $taxonomy_name);
-                echo '<li><a class="btn btn-default" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li>';
+                echo '<li><a class="btn-dcs" href="' . get_term_link($child, $taxonomy_name) . '">' . $term->name . '</a></li><br />';
             }
             echo '</ul><br />';
 
